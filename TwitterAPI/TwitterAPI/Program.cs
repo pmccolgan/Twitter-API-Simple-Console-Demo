@@ -10,7 +10,7 @@ namespace TwitterAPI
         static void Main()
         {
             // https://github.com/danielcrenna/tweetsharp
-            Console.WriteLine("Google Calender API v3");
+            Console.WriteLine("Twitter API");
 
             try
             {
@@ -21,6 +21,21 @@ namespace TwitterAPI
 
                 var service = new TwitterService(consumerKey, consumerSecret);
                 service.AuthenticateWith(token, tokenSecret);
+
+                var options = new SendTweetOptions
+                {
+                    Status = string.Format("{0} {1}", DateTime.Now, "C# Twitter API Test")
+                };
+
+                Console.WriteLine("Tweet status: {0}", options.Status);
+
+                var status = service.SendTweet(options);
+
+                Console.WriteLine(
+                    status.Id > 0 ? "Tweet looks good, id greater than zero: {0}" : "Issue tweeting, returned id: {0}",
+                    status.Id);
+
+                Console.WriteLine("Read tweets from Home Timeline");
 
                 var tweets = service.ListTweetsOnHomeTimeline(new ListTweetsOnHomeTimelineOptions());
                 
