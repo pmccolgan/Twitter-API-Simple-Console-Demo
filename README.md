@@ -1,6 +1,6 @@
 #Twitter API Simple Console Demo
 
-Simple console application to use the TweetSharp package (https://github.com/danielcrenna/tweetsharp) to read a user's timeline.  Toyed with the idea of doing all the authentication through REST (no package) but felt it was overkill after looking through this excellent guide: http://www.i-avington.com/Posts/Post/making-a-twitter-oauth-api-call-using-c
+Simple console application to use the TweetSharp package (https://github.com/danielcrenna/tweetsharp) to tweet and read a user's timeline.  Toyed with the idea of doing all the authentication through REST (no package) but felt it was overkill after looking through this excellent guide: http://www.i-avington.com/Posts/Post/making-a-twitter-oauth-api-call-using-c
 
 To use set up application credentials (this will produce an API key and secret and an access token and secret): https://dev.twitter.com/
 
